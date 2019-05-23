@@ -7,20 +7,36 @@
       <el-dialog :visible.sync="visible" title="Hello world">
           <p>Try Element</p>
       </el-dialog>
-      <Guide/>
+      <NavMenu v-bind:menu-item-list="menuItemList"/>
   </div>
 </template>
 
 <script>
-import Guide from '@/components/common/Guide'
+import NavMenu from '@/components/common/NavMenu'
 
 export default {
   name: 'app',
   components: {
-      Guide
+      NavMenu
   },
   data: function() {
-    return { visible: false }
+    return {
+        visible: false,
+        menuItemList: [
+            {
+                optionName: '选项一',
+                url: '/worker'
+            },
+            {
+                optionName: '选项二',
+                url: '/requester'
+            },
+            {
+                optionName: '选项三',
+                url: '/'
+            }
+        ]
+    }
   }
 }
 </script>
