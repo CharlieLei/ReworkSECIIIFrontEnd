@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import HelloWorld from '@/components/HelloWorld'
+import WorkerIndex from '@/components/worker/WorkerIndex'
 
 //告诉vue使用vue-router路由组件
 Vue.use(VueRouter);
@@ -11,6 +12,7 @@ export default new VueRouter({
     //定义路由表
     routes: [
         {path: '/helloworld', component: HelloWorld},
+        {path: '/worker', component: WorkerIndex},
     ],
     mode: 'history'
 });
