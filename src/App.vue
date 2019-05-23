@@ -1,21 +1,23 @@
 <template>
   <div id="app">
+
 <!--    <img alt="Vue logo" src="./assets/logo.png">-->
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-    <el-button @click="visible = true">Button</el-button>
-    <el-dialog :visible.sync="visible" title="Hello world">
-      <p>Try Element</p>
-    </el-dialog>
+      <el-button @click="visible = true">Button</el-button>
+      <el-dialog :visible.sync="visible" title="Hello world">
+          <p>Try Element</p>
+      </el-dialog>
+      <Guide/>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import Guide from '@/components/common/Guide'
 
 export default {
   name: 'app',
   components: {
-    // HelloWorld
+      Guide
   },
   data: function() {
     return { visible: false }
